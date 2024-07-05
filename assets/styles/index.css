@@ -1,0 +1,90 @@
+@import url("./base.css");
+
+body {
+  height: 100vh;
+  background-color: var(--color-black);
+
+  font-family: var(--font-family);
+  font-size: var(--font-size-14);
+  color: var(--color-white);
+}
+
+main {
+  height: 100%;
+
+  display: flex;
+  padding: 16px;
+}
+
+.card {
+  width: 100%;
+  max-width: 20.4375rem;
+
+  padding: 24px;
+  margin: auto;
+  background-color: var(--color-dark-grey);
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.5rem;
+
+  text-align: center;
+}
+
+.card__avatar {
+  height: 5.5rem;
+  width: 5.5rem;
+
+  border-radius: 11rem;
+}
+
+.card__title {
+  font-size: var(--font-size-24);
+  font-weight: var(--font-weight-semibold);
+}
+
+.card__location {
+  margin-top: -1.25rem;
+
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.card__link-list {
+  list-style-type: none;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.card__link-list a,
+.card__link-list a:visited {
+  display: block;
+  padding: 12px;
+  background-color: var(--color-grey);
+  border-radius: 8px;
+
+  color: var(--color-white);
+  font-weight: bold;
+  text-decoration: none;
+
+  transition: background-color var(--transition-duration),
+    color var(--transition-duration);
+}
+
+.card__link-list a:hover,
+.card__link-list a:focus {
+  background-color: var(--color-primary);
+  color: var(--color-grey);
+}
+
+@media (min-width: 90rem) {
+  .card {
+    max-width: 24rem;
+    padding: 40px;
+  }
+}
